@@ -1,6 +1,6 @@
 {
   "name": "cwl-utils",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "email": "340254797@qq.com",
     "url": "https://github.com/mrcwl/"
   },
+  "typings": "lib/index.d.ts",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrcwl/cwl/issues"

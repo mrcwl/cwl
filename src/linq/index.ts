@@ -124,8 +124,12 @@ export class List<T> {
   /**
    * Returns distinct elements from a sequence by using the default equality comparer to compare values.
    */
-  public Distinct(): List<T> {
-    return this.Where((value, index, iter) => iter.indexOf(value) === index)
+  public Distinct(filter?: (item: T, value: T) => any): List<T> {
+      if(filter){
+        return this.Where((value, index, iter) => iter.findIndex(_i => filter(_i,value)) === index)
+      }else{
+        return this.Where((value, index, iter) => iter.indexOf(value) === index)
+      }
   }
 
   /**
