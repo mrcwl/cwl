@@ -128,7 +128,7 @@ export class List<T> {
     public Distinct(filter: (item: T, value: T) => any): List<T>
     public Distinct(filter?: (item: T, value: T) => any): List<T> {
         if (filter) {
-            return this.Where((value, index, iter) => iter.findIndex(_i => filter(_i, value)) === index)
+            return this.Where((value, index, iter: any) => iter.findIndex(_i => filter(_i, value)) === index)
         } else {
             return this.Where((value, index, iter) => iter.indexOf(value) === index)
         }
